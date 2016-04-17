@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="net.groupe_efrei.projecttranmertz.User">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:id="@+id/imageAnime"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:paddingTop="-10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/imageAnime"
+            android:layout_toEndOf="@+id/imageAnime"
+            android:layout_toRightOf="@+id/imageAnime"
+            android:layout_alignBottom="@+id/imageAnime"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="3dp"
+            android:id="@+id/relativeLayout">
+
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/scrollView"
+                android:layout_below="@+id/Information"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Information:"
+                    android:id="@+id/animeInformation"
+                    android:lineSpacingExtra="10dp"
+                    android:layout_below="@+id/Information"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#000000" />
+            </ScrollView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Information:"
+                android:id="@+id/Information"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textIsSelectable="true"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollAnimeDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textViewDescription">
+            <WebView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Anime Description"
+                android:id="@+id/animeDescription"
+                android:layout_below="@+id/textViewDescription"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#000000" />
+
+        </ScrollView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: "
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:id="@+id/textViewDescription"
+            android:layout_below="@+id/imageAnime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="#000000" />
+
+
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
